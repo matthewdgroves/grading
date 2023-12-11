@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib
+import matplotlib.pyplot as plt
 from numpy import interp
 
 # 135
@@ -106,6 +106,6 @@ finalDB = LTgrades_w_avg.drop(finalCleaning, axis=1)
 finalDB.to_csv("Mod 1 Physics Grades 246.csv")
 
 finalDB.head(n=500)
-print(finalDB)
-
-hist = finalDB.hist(bins=5)
+#print(finalDB)
+finalDB.hist()
+plt.show()
